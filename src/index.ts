@@ -2,13 +2,13 @@ import { _toMarkdown } from './_toMarkdown.js'
 import { bold } from './bold.js'
 import { build } from './build.js'
 import { codeBlock } from './codeBlock.js'
+import { expandableQuote } from './expandableQuote.js'
 import { inlineCode } from './inlineCode.js'
 import { italic } from './italic.js'
 import { join } from './join.js'
 import { link } from './link.js'
 import { Markdown } from './markdown.js'
 import { quote } from './quote.js'
-import { qExp } from './quoteExp.js'
 import { spoiler } from './spoiler.js'
 import { strikethrough } from './strikethrough.js'
 import { underline } from './underline.js'
@@ -45,4 +45,4 @@ md.spoiler = spoiler
 md.strikethrough = strikethrough
 md.underline = underline
 md.quote = quote
-md.qExp = qExp
+md.expandableQuote = expandableQuote
