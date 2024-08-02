@@ -7,6 +7,8 @@ import { italic } from './italic.js'
 import { join } from './join.js'
 import { link } from './link.js'
 import { Markdown } from './markdown.js'
+import { quote } from './quote.js'
+import { qExp } from './quoteExp.js'
 import { spoiler } from './spoiler.js'
 import { strikethrough } from './strikethrough.js'
 import { underline } from './underline.js'
@@ -42,3 +44,5 @@ md.link = link
 md.spoiler = spoiler
 md.strikethrough = strikethrough
 md.underline = underline
+md.quote = quote
+md.qExp = qExp
