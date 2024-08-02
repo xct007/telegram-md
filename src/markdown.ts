@@ -10,4 +10,9 @@ export class Markdown {
   toString() {
     return this.value
   }
+
+  replaceAll(arg0: string, arg1: string): Markdown {
+    this.value = this.value.replaceAll(arg0, arg1)
+    return this
+  }
 }

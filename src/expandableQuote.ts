@@ -11,10 +11,7 @@ export const expandableQuote = (text: unknown): Markdown => {
     return _toMarkdown()
   }
   return _toMarkdown(
-    `**${(text as string)
-      .split('\n')
-      .map((part: string) => `>${_toMarkdown(part)}`)
-      .join('\n')}||`,
+    `**>${_toMarkdown(text).replaceAll('\n', '\n>')}||\n`,
     true,
   )
 }

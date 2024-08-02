@@ -11,11 +11,5 @@ export const quote = (text: unknown): Markdown => {
     return _toMarkdown()
   }
 
-  return _toMarkdown(
-    (text as string)
-      .split('\n')
-      .map((part) => `>${_toMarkdown(part)}`)
-      .join('\n'),
-    true,
-  )
+  return _toMarkdown(`>${_toMarkdown(text).replaceAll('\n', '\n>')}`, true)
 }

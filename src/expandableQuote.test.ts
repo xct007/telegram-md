@@ -8,12 +8,12 @@ test('should return empty Markdown', () => {
 
 test('should return formatted Markdown', () => {
   expect(expandableQuote('foo_bar')).toEqual(
-    _toMarkdown('**>foo\\_bar||', true),
+    _toMarkdown('**>foo\\_bar||\n', true),
   )
 })
 
 test('should return formatted Markdown with multiple lines', () => {
   expect(expandableQuote('foo\nbar\nbaz')).toEqual(
-    _toMarkdown('**>foo\n>bar\n>baz||', true),
+    _toMarkdown('**>foo\n>bar\n>baz||\n', true),
   )
 })
