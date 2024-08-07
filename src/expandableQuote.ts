@@ -4,7 +4,8 @@ import { Markdown } from './markdown.js'
 /**
  * Creates a Markdown expandable block quote.
  * @example
- * md.expandableQuote('foo_bar') // => Markdown with value '**>foo\\_bar||'
+ * md.expandableQuote('foo_bar') // => Markdown with value '**>foo\\_bar||\n'
+ * md.expandableQuote('foo\nbar\nbaz') // => Markdown with value '**>foo\n>bar\n>baz||\n'
  */
 export const expandableQuote = (text: unknown): Markdown => {
   if (!text) {
