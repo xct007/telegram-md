@@ -7,9 +7,11 @@ test('should return empty Markdown', () => {
 })
 
 test('should return formatted Markdown', () => {
-  expect(quote('foo_bar')).toEqual(_toMarkdown('>foo\\_bar', true))
+  expect(quote('foo_bar')).toEqual(_toMarkdown('>foo\\_bar\n', true))
 })
 
 test('should return formatted Markdown with multiple lines', () => {
-  expect(quote('foo\nbar\nbaz')).toEqual(_toMarkdown('>foo\n>bar\n>baz', true))
+  expect(quote('foo\nbar\nbaz')).toEqual(
+    _toMarkdown('>foo\n>bar\n>baz\n', true),
+  )
 })
