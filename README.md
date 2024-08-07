@@ -126,3 +126,25 @@ md.code(
 pre\\-formatted fixed\\-width code block written in the Python
 ```
 ````
+
+### md.quote
+
+```ts
+md.quote('quote') // => Markdown with value '>quote\n'
+```
+
+### md.expandableQuote
+
+````ts
+md.expandableQuote(
+  `The expandable block quotation started
+It is separated from the previous block quotation
+The last line of the expandable block quotation`,
+) // => Markdown with value '```\nThe expandable block quotation started\nIt is separated from the previous block quotation\nThe last line of the expandable block quotation||\n```'
+```
+**>The expandable block quotation started
+>It is separated from the previous block quotation
+>The last line of the expandable block quotation||
+
+```
+````
